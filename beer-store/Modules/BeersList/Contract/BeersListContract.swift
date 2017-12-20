@@ -21,7 +21,7 @@ protocol BeersListPresentation: class {
     var router: BeersListWireframe! { get set }
 
     func viewDidLoad()
-    func didSelectBeer()
+    func didSelectBeer(_ beer: Beer)
 }
 
 protocol BeersListUseCase: class {
