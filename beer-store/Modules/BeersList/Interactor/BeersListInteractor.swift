@@ -12,9 +12,9 @@ class BeersListInteractor: BeersListUseCase {
     weak var output: BeersListInteractorOutput?
 
     func fetchBeersList() {
-        let url = URL(fileURLWithPath: "https://api.punkapi.com/v2/beers")
+        let url = URL(string: "https://api.punkapi.com/v2/beers")
 
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error != nil {
                 self.output?.beersListFetchFailed()
             } else {
@@ -27,6 +27,6 @@ class BeersListInteractor: BeersListUseCase {
                     print("Serializtion Error: \(error)")
                 }
             }
-        }
+        }.resume()
     }
 }
