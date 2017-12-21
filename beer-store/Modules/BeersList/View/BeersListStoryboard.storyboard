@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IMr-hb-hL7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beers List View Controller-->
+        <scene sceneID="UFc-Ix-GMB">
+            <objects>
+                <viewController id="IMr-hb-hL7" customClass="BeersListViewController" customModule="beer_store" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Roq-2X-DCh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C88-0i-8uu">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="C88-0i-8uu" firstAttribute="height" secondItem="Roq-2X-DCh" secondAttribute="height" id="IeC-6v-giI"/>
+                            <constraint firstItem="C88-0i-8uu" firstAttribute="width" secondItem="Roq-2X-DCh" secondAttribute="width" id="aD8-qv-3QY"/>
+                            <constraint firstItem="C88-0i-8uu" firstAttribute="centerY" secondItem="8bm-uX-crm" secondAttribute="centerY" id="gC9-kj-wga"/>
+                            <constraint firstItem="C88-0i-8uu" firstAttribute="centerX" secondItem="8bm-uX-crm" secondAttribute="centerX" id="lZ5-dU-ifv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8bm-uX-crm"/>
+                    </view>
+                    <connections>
+                        <outlet property="beersListTableView" destination="C88-0i-8uu" id="99U-fY-Pba"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFH-5R-D75" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16.800000000000001" y="-464.6176911544228"/>
+        </scene>
+    </scenes>
+</document>

@@ -14,6 +14,10 @@
 		B504546D1FE9A969006B7BC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B504546B1FE9A969006B7BC0 /* LaunchScreen.storyboard */; };
 		B57F8FA71FEAF2E100784178 /* BeersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F8FA61FEAF2E100784178 /* BeersListInteractor.swift */; };
 		B57F8FAA1FEAF7DD00784178 /* BeersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F8FA91FEAF7DD00784178 /* BeersListPresenter.swift */; };
+		B57F8FB01FEB4BDD00784178 /* BeersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F8FAF1FEB4BDD00784178 /* BeersListViewController.swift */; };
+		B57F8FB21FEB538F00784178 /* BeersListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57F8FB11FEB538F00784178 /* BeersListStoryboard.storyboard */; };
+		B57F8FB51FEB549A00784178 /* BeersListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F8FB31FEB549A00784178 /* BeersListTableViewCell.swift */; };
+		B57F8FB61FEB549A00784178 /* BeersListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57F8FB41FEB549A00784178 /* BeersListTableViewCell.xib */; };
 		B5A849631FEAECA6005424AF /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A849621FEAECA6005424AF /* Beer.swift */; };
 		B5A849681FEAED9C005424AF /* BeersListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A849671FEAED9C005424AF /* BeersListContract.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +32,10 @@
 		B504546E1FE9A969006B7BC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B57F8FA61FEAF2E100784178 /* BeersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListInteractor.swift; sourceTree = "<group>"; };
 		B57F8FA91FEAF7DD00784178 /* BeersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListPresenter.swift; sourceTree = "<group>"; };
+		B57F8FAF1FEB4BDD00784178 /* BeersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListViewController.swift; sourceTree = "<group>"; };
+		B57F8FB11FEB538F00784178 /* BeersListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BeersListStoryboard.storyboard; sourceTree = "<group>"; };
+		B57F8FB31FEB549A00784178 /* BeersListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListTableViewCell.swift; sourceTree = "<group>"; };
+		B57F8FB41FEB549A00784178 /* BeersListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeersListTableViewCell.xib; sourceTree = "<group>"; };
 		B5A849621FEAECA6005424AF /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		B5A849671FEAED9C005424AF /* BeersListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +98,17 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		B57F8FAE1FEB4B1D00784178 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B57F8FB11FEB538F00784178 /* BeersListStoryboard.storyboard */,
+				B57F8FAF1FEB4BDD00784178 /* BeersListViewController.swift */,
+				B57F8FB41FEB549A00784178 /* BeersListTableViewCell.xib */,
+				B57F8FB31FEB549A00784178 /* BeersListTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B5A849611FEAEC91005424AF /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +131,7 @@
 				B5A849661FEAED6F005424AF /* Contract */,
 				B57F8FA51FEAF2C200784178 /* Interactor */,
 				B57F8FA81FEAF7BF00784178 /* Presenter */,
+				B57F8FAE1FEB4B1D00784178 /* View */,
 			);
 			path = BeersList;
 			sourceTree = "<group>";
@@ -186,6 +206,8 @@
 				B504546D1FE9A969006B7BC0 /* LaunchScreen.storyboard in Resources */,
 				B504546A1FE9A969006B7BC0 /* Assets.xcassets in Resources */,
 				B50454681FE9A969006B7BC0 /* Main.storyboard in Resources */,
+				B57F8FB21FEB538F00784178 /* BeersListStoryboard.storyboard in Resources */,
+				B57F8FB61FEB549A00784178 /* BeersListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,12 +218,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57F8FB01FEB4BDD00784178 /* BeersListViewController.swift in Sources */,
 				B50454651FE9A969006B7BC0 /* ViewController.swift in Sources */,
 				B5A849681FEAED9C005424AF /* BeersListContract.swift in Sources */,
 				B57F8FA71FEAF2E100784178 /* BeersListInteractor.swift in Sources */,
 				B5A849631FEAECA6005424AF /* Beer.swift in Sources */,
 				B57F8FAA1FEAF7DD00784178 /* BeersListPresenter.swift in Sources */,
 				B50454631FE9A969006B7BC0 /* AppDelegate.swift in Sources */,
+				B57F8FB51FEB549A00784178 /* BeersListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,11 +362,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "beer-store/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.falcaoaugustos.beer-store";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -352,11 +379,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "beer-store/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.falcaoaugustos.beer-store";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
