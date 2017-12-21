@@ -13,5 +13,4 @@ struct Beer: Codable {
     var tagline: String
     var description: String
     var image_url: String
-    var favorite: Bool
 }
