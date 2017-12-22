@@ -15,12 +15,14 @@ enum UserService: ServiceRequest {
         switch self {
         case .getBeersList:
             return "/beers"
+        }
     }
 
     var method: HTTPMethod {
         switch self {
         case .getBeersList:
             return .get
+        }
     }
 
     var body: Data? {
