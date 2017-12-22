@@ -8,25 +8,27 @@
 
 import Foundation
 
-class BeersListInteractor: BeersListUseCase {
+class BeersListInteractor: BeersListUseCase, ServerDispatcherDelegate {
+
     weak var output: BeersListInteractorOutput?
 
     func fetchBeersList() {
-        let url = URL(string: "https://api.punkapi.com/v2/beers")
+        let request = UserService.getBeersList
+        let dispatcher = ServerDispatcher(baseURL: .punkAPI)
+        dispatcher.delegate = self
+        dispatcher.execute(request: request)
+    }
 
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            if error != nil {
-                self.output?.beersListFetchFailed()
-            } else {
-                guard let data = data else { return }
+    // MARK: Server Dispatcher Delegate
 
-                do {
-                    let beersList = try JSONDecoder().decode([Beer].self, from: data)
-                    self.output?.beersListFetched(beersList)
-                } catch let error {
-                    print("Serializtion Error: \(error)")
-                }
-            }
-        }.resume()
+    func didReceiveRequestResponseData(_ data: Data?) {
+        guard let data = data else { return }
+
+        do {
+            let beersList = try JSONDecoder().decode([Beer].self, from: data)
+            self.output?.beersListFetched(beersList)
+        } catch let error {
+            print("Serializtion Error: \(error)")
+        }
     }
 }
