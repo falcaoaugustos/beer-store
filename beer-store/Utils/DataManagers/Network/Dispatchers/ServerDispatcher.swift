@@ -14,10 +14,10 @@ protocol ServerDispatcherDelegate {
 
 class ServerDispatcher: RequestDispatcher {
 
-    private var baseURL: String
+    private var baseURL: BaseURL
     var delegate: ServerDispatcherDelegate? = nil
 
-    required init(baseURL: String) {
+    required init(baseURL: BaseURL) {
         self.baseURL = baseURL
     }
 
@@ -45,6 +45,6 @@ class ServerDispatcher: RequestDispatcher {
     }
 
     private func prepareURLRequest(for request: ServiceRequest) -> URL {
-        return URL(string: "\(baseURL)\(request.path)")!
+        return URL(string: "\(baseURL.rawValue)\(request.path)")!
     }
 }

@@ -1,5 +1,5 @@
 //
-//  RequestDispatcher.swift
+//  Endpoints.swift
 //  beer-store
 //
 //  Created by Augusto Falcão on 12/22/17.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-protocol RequestDispatcher {
-    init(baseURL: BaseURL)
-    func execute(request: ServiceRequest)
+enum BaseURL: String {
+    case punkAPI = "https://api.punkapi.com/v2/"
 }
