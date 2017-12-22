@@ -24,6 +24,7 @@
 		B59A12CF1FECDC4A00F5D118 /* RequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A12CE1FECDC4A00F5D118 /* RequestDispatcher.swift */; };
 		B59A12D21FECDD1B00F5D118 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A12D11FECDD1B00F5D118 /* UserService.swift */; };
 		B59A12D61FECDFD200F5D118 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A12D51FECDFD200F5D118 /* Response.swift */; };
+		B59A12D91FECE2DD00F5D118 /* ServerDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A12D81FECE2DD00F5D118 /* ServerDispatcher.swift */; };
 		B5A849631FEAECA6005424AF /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A849621FEAECA6005424AF /* Beer.swift */; };
 		B5A849681FEAED9C005424AF /* BeersListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A849671FEAED9C005424AF /* BeersListContract.swift */; };
 		B5B1AA7B1FECA26A00D3DD37 /* BeerDetailsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B1AA7A1FECA26A00D3DD37 /* BeerDetailsContract.swift */; };
@@ -52,6 +53,7 @@
 		B59A12CE1FECDC4A00F5D118 /* RequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDispatcher.swift; sourceTree = "<group>"; };
 		B59A12D11FECDD1B00F5D118 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B59A12D51FECDFD200F5D118 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		B59A12D81FECE2DD00F5D118 /* ServerDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDispatcher.swift; sourceTree = "<group>"; };
 		B5A849621FEAECA6005424AF /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		B5A849671FEAED9C005424AF /* BeersListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListContract.swift; sourceTree = "<group>"; };
 		B5B1AA7A1FECA26A00D3DD37 /* BeerDetailsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsContract.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				B59A12CB1FECDB2D00F5D118 /* Protocols */,
 				B59A12D01FECDCF400F5D118 /* Request */,
 				B59A12D41FECDFB700F5D118 /* Response */,
+				B59A12D71FECE2B300F5D118 /* Dispatchers */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -195,6 +198,14 @@
 				B59A12D51FECDFD200F5D118 /* Response.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		B59A12D71FECE2B300F5D118 /* Dispatchers */ = {
+			isa = PBXGroup;
+			children = (
+				B59A12D81FECE2DD00F5D118 /* ServerDispatcher.swift */,
+			);
+			path = Dispatchers;
 			sourceTree = "<group>";
 		};
 		B5A849611FEAEC91005424AF /* Entities */ = {
@@ -352,6 +363,7 @@
 				B5B1AA871FECC02100D3DD37 /* BeerDetailsViewController.swift in Sources */,
 				B59A12CF1FECDC4A00F5D118 /* RequestDispatcher.swift in Sources */,
 				B5A849681FEAED9C005424AF /* BeersListContract.swift in Sources */,
+				B59A12D91FECE2DD00F5D118 /* ServerDispatcher.swift in Sources */,
 				B5B1AA7F1FECAA0A00D3DD37 /* BeerDetailsPresenter.swift in Sources */,
 				B5B1AA7B1FECA26A00D3DD37 /* BeerDetailsContract.swift in Sources */,
 				B59A12CD1FECDB4100F5D118 /* ServiceRequest.swift in Sources */,
