@@ -12,6 +12,7 @@
 		B50454681FE9A969006B7BC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B50454661FE9A969006B7BC0 /* Main.storyboard */; };
 		B504546A1FE9A969006B7BC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B50454691FE9A969006B7BC0 /* Assets.xcassets */; };
 		B504546D1FE9A969006B7BC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B504546B1FE9A969006B7BC0 /* LaunchScreen.storyboard */; };
+		B55DA9EA1FEC6A8B00D5158D /* BeersListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DA9E91FEC6A8B00D5158D /* BeersListRouter.swift */; };
 		B57F8FA71FEAF2E100784178 /* BeersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F8FA61FEAF2E100784178 /* BeersListInteractor.swift */; };
 		B57F8FAA1FEAF7DD00784178 /* BeersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F8FA91FEAF7DD00784178 /* BeersListPresenter.swift */; };
 		B57F8FB01FEB4BDD00784178 /* BeersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F8FAF1FEB4BDD00784178 /* BeersListViewController.swift */; };
@@ -30,6 +31,7 @@
 		B50454691FE9A969006B7BC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B504546C1FE9A969006B7BC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B504546E1FE9A969006B7BC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B55DA9E91FEC6A8B00D5158D /* BeersListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListRouter.swift; sourceTree = "<group>"; };
 		B57F8FA61FEAF2E100784178 /* BeersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListInteractor.swift; sourceTree = "<group>"; };
 		B57F8FA91FEAF7DD00784178 /* BeersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListPresenter.swift; sourceTree = "<group>"; };
 		B57F8FAF1FEB4BDD00784178 /* BeersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 			path = "beer-store";
 			sourceTree = "<group>";
 		};
+		B55DA9E81FEC6A5900D5158D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B55DA9E91FEC6A8B00D5158D /* BeersListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		B57F8FA51FEAF2C200784178 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +141,7 @@
 				B5A849661FEAED6F005424AF /* Contract */,
 				B57F8FA51FEAF2C200784178 /* Interactor */,
 				B57F8FA81FEAF7BF00784178 /* Presenter */,
+				B55DA9E81FEC6A5900D5158D /* Router */,
 				B57F8FAE1FEB4B1D00784178 /* View */,
 			);
 			path = BeersList;
@@ -220,6 +231,7 @@
 			files = (
 				B57F8FB01FEB4BDD00784178 /* BeersListViewController.swift in Sources */,
 				B50454651FE9A969006B7BC0 /* ViewController.swift in Sources */,
+				B55DA9EA1FEC6A8B00D5158D /* BeersListRouter.swift in Sources */,
 				B5A849681FEAED9C005424AF /* BeersListContract.swift in Sources */,
 				B57F8FA71FEAF2E100784178 /* BeersListInteractor.swift in Sources */,
 				B5A849631FEAECA6005424AF /* Beer.swift in Sources */,
