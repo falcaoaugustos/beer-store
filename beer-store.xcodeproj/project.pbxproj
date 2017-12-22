@@ -20,6 +20,7 @@
 		B57F8FB51FEB549A00784178 /* BeersListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F8FB31FEB549A00784178 /* BeersListTableViewCell.swift */; };
 		B57F8FB61FEB549A00784178 /* BeersListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57F8FB41FEB549A00784178 /* BeersListTableViewCell.xib */; };
 		B59A12C51FECC5DA00F5D118 /* BeerDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A12C41FECC5DA00F5D118 /* BeerDetailsRouter.swift */; };
+		B59A12CD1FECDB4100F5D118 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A12CC1FECDB4100F5D118 /* ServiceRequest.swift */; };
 		B5A849631FEAECA6005424AF /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A849621FEAECA6005424AF /* Beer.swift */; };
 		B5A849681FEAED9C005424AF /* BeersListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A849671FEAED9C005424AF /* BeersListContract.swift */; };
 		B5B1AA7B1FECA26A00D3DD37 /* BeerDetailsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B1AA7A1FECA26A00D3DD37 /* BeerDetailsContract.swift */; };
@@ -44,6 +45,7 @@
 		B57F8FB31FEB549A00784178 /* BeersListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListTableViewCell.swift; sourceTree = "<group>"; };
 		B57F8FB41FEB549A00784178 /* BeersListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeersListTableViewCell.xib; sourceTree = "<group>"; };
 		B59A12C41FECC5DA00F5D118 /* BeerDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsRouter.swift; sourceTree = "<group>"; };
+		B59A12CC1FECDB4100F5D118 /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 		B5A849621FEAECA6005424AF /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		B5A849671FEAED9C005424AF /* BeersListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListContract.swift; sourceTree = "<group>"; };
 		B5B1AA7A1FECA26A00D3DD37 /* BeerDetailsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsContract.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				B5A849641FEAED5F005424AF /* Modules */,
 				B5A849611FEAEC91005424AF /* Entities */,
+				B59A12C61FECD94700F5D118 /* Utils */,
 				B50454621FE9A969006B7BC0 /* AppDelegate.swift */,
 				B50454641FE9A969006B7BC0 /* ViewController.swift */,
 				B50454661FE9A969006B7BC0 /* Main.storyboard */,
@@ -135,6 +138,38 @@
 				B59A12C41FECC5DA00F5D118 /* BeerDetailsRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		B59A12C61FECD94700F5D118 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B59A12C71FECD96100F5D118 /* DataManagers */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B59A12C71FECD96100F5D118 /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				B59A12C81FECD96800F5D118 /* Network */,
+			);
+			path = DataManagers;
+			sourceTree = "<group>";
+		};
+		B59A12C81FECD96800F5D118 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B59A12CB1FECDB2D00F5D118 /* Protocols */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B59A12CB1FECDB2D00F5D118 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B59A12CC1FECDB4100F5D118 /* ServiceRequest.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		B5A849611FEAEC91005424AF /* Entities */ = {
@@ -292,6 +327,7 @@
 				B5A849681FEAED9C005424AF /* BeersListContract.swift in Sources */,
 				B5B1AA7F1FECAA0A00D3DD37 /* BeerDetailsPresenter.swift in Sources */,
 				B5B1AA7B1FECA26A00D3DD37 /* BeerDetailsContract.swift in Sources */,
+				B59A12CD1FECDB4100F5D118 /* ServiceRequest.swift in Sources */,
 				B59A12C51FECC5DA00F5D118 /* BeerDetailsRouter.swift in Sources */,
 				B57F8FA71FEAF2E100784178 /* BeersListInteractor.swift in Sources */,
 				B5A849631FEAECA6005424AF /* Beer.swift in Sources */,
