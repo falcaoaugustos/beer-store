@@ -8,8 +8,8 @@
 
 import Foundation
 
-class BeerDescriptionPresenter: BeerDescriptionPresentation {
-    var view: BeerDescriptionView?
+class BeerDetailsPresenter: BeerDetailsPresentation {
+    var view: BeerDetailsView?
 
     var beer: Beer!
 

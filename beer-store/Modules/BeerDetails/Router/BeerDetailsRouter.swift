@@ -8,12 +8,12 @@
 
 import UIKit
 
-class BeerDetailsRouter: BeerDescriptionWireframe {
+class BeerDetailsRouter: BeerDetailsWireframe {
 
     static func assembleModule(withBeer beer: Beer) -> UIViewController {
-        let storyboard = UIStoryboard(name: "BeerDescriptionStoryboard", bundle: Bundle.main)
-        let view = storyboard.instantiateInitialViewController() as? BeerDescriptionViewController
-        let presenter = BeerDescriptionPresenter()
+        let storyboard = UIStoryboard(name: "BeerDetailsStoryboard", bundle: Bundle.main)
+        let view = storyboard.instantiateInitialViewController() as? BeerDetailsViewController
+        let presenter = BeerDetailsPresenter()
 
         view?.presenter = presenter
 

@@ -8,18 +8,18 @@
 
 import UIKit
 
-protocol BeerDescriptionView: class {
-    var presenter: BeerDescriptionPresentation! { get set }
+protocol BeerDetailsView: class {
+    var presenter: BeerDetailsPresentation! { get set }
 
     func showDetails(forBeer beer: Beer)
 }
 
-protocol BeerDescriptionPresentation: class {
-    weak var view: BeerDescriptionView? { get set }
+protocol BeerDetailsPresentation: class {
+    weak var view: BeerDetailsView? { get set }
 
     func viewDidLoad()
 }
 
-protocol BeerDescriptionWireframe {
+protocol BeerDetailsWireframe {
     static func assembleModule(withBeer beer: Beer) -> UIViewController
 }

@@ -8,9 +8,9 @@
 
 import UIKit
 
-class BeerDescriptionViewController: UIViewController, BeerDescriptionView {
+class BeerDetailsViewController: UIViewController, BeerDetailsView {
     
-    var presenter: BeerDescriptionPresentation!
+    var presenter: BeerDetailsPresentation!
 
     @IBOutlet var beerImageView: UIImageView!
     @IBOutlet var detailsTextView: UITextView!
