@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tb8-d7-nyh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beer Description View Controller-->
+        <scene sceneID="2ou-9W-K90">
+            <objects>
+                <viewController id="Tb8-d7-nyh" customClass="BeerDescriptionViewController" customModule="beer_store" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BlI-B6-Bzh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AFk-5T-7bG">
+                                <rect key="frame" x="37" y="68.5" width="300" height="550"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qvi-jD-8f6">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bap-pv-jBn">
+                                        <rect key="frame" x="0.0" y="300" width="300" height="250"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AFk-5T-7bG" firstAttribute="centerY" secondItem="xcy-dy-E2j" secondAttribute="centerY" id="BTc-DW-ED7"/>
+                            <constraint firstItem="AFk-5T-7bG" firstAttribute="width" secondItem="BlI-B6-Bzh" secondAttribute="width" multiplier="300/375" id="KjF-d6-kCs"/>
+                            <constraint firstItem="AFk-5T-7bG" firstAttribute="height" secondItem="BlI-B6-Bzh" secondAttribute="height" multiplier="550/667" id="YDq-ut-aif"/>
+                            <constraint firstItem="AFk-5T-7bG" firstAttribute="centerX" secondItem="xcy-dy-E2j" secondAttribute="centerX" id="eJi-xd-kPq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xcy-dy-E2j"/>
+                    </view>
+                    <connections>
+                        <outlet property="beerImageView" destination="Qvi-jD-8f6" id="lcl-yY-HXs"/>
+                        <outlet property="detailsTextView" destination="Bap-pv-jBn" id="07n-TV-ebf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JFz-gQ-yhY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="85.907046476761622"/>
+        </scene>
+    </scenes>
+</document>

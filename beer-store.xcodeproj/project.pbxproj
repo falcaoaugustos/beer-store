@@ -23,6 +23,8 @@
 		B5A849681FEAED9C005424AF /* BeersListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A849671FEAED9C005424AF /* BeersListContract.swift */; };
 		B5B1AA7B1FECA26A00D3DD37 /* BeerDescriptionContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B1AA7A1FECA26A00D3DD37 /* BeerDescriptionContract.swift */; };
 		B5B1AA7F1FECAA0A00D3DD37 /* BeerDescriptionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B1AA7E1FECAA0A00D3DD37 /* BeerDescriptionPresenter.swift */; };
+		B5B1AA851FECBFFF00D3DD37 /* BeerDescriptionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5B1AA841FECBFFF00D3DD37 /* BeerDescriptionStoryboard.storyboard */; };
+		B5B1AA871FECC02100D3DD37 /* BeerDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B1AA861FECC02100D3DD37 /* BeerDescriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		B5A849671FEAED9C005424AF /* BeersListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListContract.swift; sourceTree = "<group>"; };
 		B5B1AA7A1FECA26A00D3DD37 /* BeerDescriptionContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDescriptionContract.swift; sourceTree = "<group>"; };
 		B5B1AA7E1FECAA0A00D3DD37 /* BeerDescriptionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDescriptionPresenter.swift; sourceTree = "<group>"; };
+		B5B1AA841FECBFFF00D3DD37 /* BeerDescriptionStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BeerDescriptionStoryboard.storyboard; sourceTree = "<group>"; };
+		B5B1AA861FECC02100D3DD37 /* BeerDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDescriptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 			children = (
 				B5B1AA791FECA25500D3DD37 /* Contract */,
 				B5B1AA7C1FECA9EC00D3DD37 /* Presenter */,
+				B5B1AA831FECBFCF00D3DD37 /* View */,
 			);
 			path = BeerDescription;
 			sourceTree = "<group>";
@@ -183,6 +188,15 @@
 				B5B1AA7E1FECAA0A00D3DD37 /* BeerDescriptionPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B5B1AA831FECBFCF00D3DD37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5B1AA841FECBFFF00D3DD37 /* BeerDescriptionStoryboard.storyboard */,
+				B5B1AA861FECC02100D3DD37 /* BeerDescriptionViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5B1AA851FECBFFF00D3DD37 /* BeerDescriptionStoryboard.storyboard in Resources */,
 				B504546D1FE9A969006B7BC0 /* LaunchScreen.storyboard in Resources */,
 				B504546A1FE9A969006B7BC0 /* Assets.xcassets in Resources */,
 				B50454681FE9A969006B7BC0 /* Main.storyboard in Resources */,
@@ -262,6 +277,7 @@
 				B57F8FB01FEB4BDD00784178 /* BeersListViewController.swift in Sources */,
 				B50454651FE9A969006B7BC0 /* ViewController.swift in Sources */,
 				B55DA9EA1FEC6A8B00D5158D /* BeersListRouter.swift in Sources */,
+				B5B1AA871FECC02100D3DD37 /* BeerDescriptionViewController.swift in Sources */,
 				B5A849681FEAED9C005424AF /* BeersListContract.swift in Sources */,
 				B5B1AA7F1FECAA0A00D3DD37 /* BeerDescriptionPresenter.swift in Sources */,
 				B5B1AA7B1FECA26A00D3DD37 /* BeerDescriptionContract.swift in Sources */,
