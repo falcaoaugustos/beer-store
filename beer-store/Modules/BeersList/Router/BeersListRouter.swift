@@ -34,8 +34,7 @@ class BeersListRouter: BeersListWireframe {
     }
 
     func presentBeerDetails(_ beer: Beer) {
-        let beerDetailsModuleViewController = UIViewController()
-        // assemble beer detail module
+        let beerDetailsModuleViewController = BeerDetailsRouter.assembleModule(withBeer: beer)
         viewController?.navigationController?.pushViewController(beerDetailsModuleViewController, animated: true)
     }
 }
