@@ -21,10 +21,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AFk-5T-7bG">
                                 <rect key="frame" x="37" y="68.5" width="300" height="550"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qvi-jD-8f6">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qvi-jD-8f6">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="295"/>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bap-pv-jBn">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bap-pv-jBn">
                                         <rect key="frame" x="0.0" y="300" width="300" height="250"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -37,6 +37,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AFk-5T-7bG" firstAttribute="centerY" secondItem="xcy-dy-E2j" secondAttribute="centerY" id="BTc-DW-ED7"/>
+                            <constraint firstItem="Qvi-jD-8f6" firstAttribute="height" secondItem="BlI-B6-Bzh" secondAttribute="height" multiplier="295/667" id="EBb-aM-bjW"/>
                             <constraint firstItem="AFk-5T-7bG" firstAttribute="width" secondItem="BlI-B6-Bzh" secondAttribute="width" multiplier="300/375" id="KjF-d6-kCs"/>
                             <constraint firstItem="AFk-5T-7bG" firstAttribute="height" secondItem="BlI-B6-Bzh" secondAttribute="height" multiplier="550/667" id="YDq-ut-aif"/>
                             <constraint firstItem="AFk-5T-7bG" firstAttribute="centerX" secondItem="xcy-dy-E2j" secondAttribute="centerX" id="eJi-xd-kPq"/>

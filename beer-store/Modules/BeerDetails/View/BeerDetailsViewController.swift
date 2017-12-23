@@ -21,6 +21,8 @@ class BeerDetailsViewController: UIViewController, BeerDetailsView {
     }
 
     func showDetails(forBeer beer: Beer) {
+        beerImageView.updateImageFrom(string: beer.image_url)
+        
         detailsTextView.text = """
         \(beer.name)
         \(beer.tagline)
