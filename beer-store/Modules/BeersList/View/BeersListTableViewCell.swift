@@ -14,6 +14,7 @@ class BeersListTableViewCell: UITableViewCell {
     @IBOutlet var beerTaglineLabel: UILabel!
 
     func setupWith(beer: Beer) {
+        beerImageView.updateImageFrom(string: beer.image_url)
         beerNameLabel.text = beer.name
         beerTaglineLabel.text = beer.tagline
     }

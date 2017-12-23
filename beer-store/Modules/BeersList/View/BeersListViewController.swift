@@ -68,7 +68,7 @@ class BeersListViewController: UIViewController, BeersListView, UITableViewDataS
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160.0
+        return 320.0
     }
 
 }
