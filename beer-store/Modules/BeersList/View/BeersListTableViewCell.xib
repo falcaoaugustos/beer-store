@@ -20,36 +20,36 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JBI-H4-WW0">
-                        <rect key="frame" x="0.0" y="0.0" width="105" height="320"/>
+                        <rect key="frame" x="0.0" y="10" width="105" height="299.5"/>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="W3r-Hb-drX">
-                        <rect key="frame" x="113" y="122" width="199" height="76"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="W3r-Hb-drX">
+                        <rect key="frame" x="121" y="97" width="183" height="126"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z95-vZ-vsh">
-                                <rect key="frame" x="0.0" y="0.0" width="199" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z95-vZ-vsh">
+                                <rect key="frame" x="0.0" y="0.0" width="183" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqh-Zy-BuY">
-                                <rect key="frame" x="0.0" y="23" width="199" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqh-Zy-BuY">
+                                <rect key="frame" x="0.0" y="48" width="183" height="18"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWt-pp-Oku">
-                                <rect key="frame" x="0.0" y="46" width="199" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWt-pp-Oku">
+                                <rect key="frame" x="0.0" y="96" width="183" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="JBI-H4-WW0" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="1Sa-MW-XYJ"/>
-                    <constraint firstItem="W3r-Hb-drX" firstAttribute="leading" secondItem="JBI-H4-WW0" secondAttribute="trailing" constant="8" id="5SI-6X-d8W"/>
+                    <constraint firstItem="JBI-H4-WW0" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="300/320" id="1Sa-MW-XYJ"/>
+                    <constraint firstItem="W3r-Hb-drX" firstAttribute="leading" secondItem="JBI-H4-WW0" secondAttribute="trailing" constant="16" id="5SI-6X-d8W"/>
                     <constraint firstItem="JBI-H4-WW0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="GGp-j1-MLS"/>
-                    <constraint firstItem="W3r-Hb-drX" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="199/320" id="L8c-23-8L0"/>
-                    <constraint firstItem="JBI-H4-WW0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PLn-sE-j9a"/>
+                    <constraint firstItem="W3r-Hb-drX" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="183/320" id="L8c-23-8L0"/>
+                    <constraint firstItem="JBI-H4-WW0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="PLn-sE-j9a"/>
                     <constraint firstItem="JBI-H4-WW0" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="105/320" id="RWg-kP-2gT"/>
                     <constraint firstItem="W3r-Hb-drX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iaA-5w-vkn"/>
                 </constraints>
