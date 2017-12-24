@@ -18,35 +18,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AFk-5T-7bG">
-                                <rect key="frame" x="37" y="68.5" width="300" height="550"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AFk-5T-7bG">
+                                <rect key="frame" x="22" y="68.5" width="330" height="550"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qvi-jD-8f6">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="295"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="270"/>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bap-pv-jBn">
-                                        <rect key="frame" x="0.0" y="300" width="300" height="250"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="BSx-2C-Sba">
+                                        <rect key="frame" x="0.0" y="280" width="330" height="270"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnf-NP-JjR">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="90"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSF-sj-GJT">
+                                                <rect key="frame" x="0.0" y="90" width="330" height="90"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tW-gY-BIa">
+                                                <rect key="frame" x="0.0" y="180" width="330" height="90"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Qvi-jD-8f6" firstAttribute="width" secondItem="AFk-5T-7bG" secondAttribute="width" id="i3I-Yd-lUG"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AFk-5T-7bG" firstAttribute="centerY" secondItem="xcy-dy-E2j" secondAttribute="centerY" id="BTc-DW-ED7"/>
-                            <constraint firstItem="Qvi-jD-8f6" firstAttribute="height" secondItem="BlI-B6-Bzh" secondAttribute="height" multiplier="295/667" id="EBb-aM-bjW"/>
-                            <constraint firstItem="AFk-5T-7bG" firstAttribute="width" secondItem="BlI-B6-Bzh" secondAttribute="width" multiplier="300/375" id="KjF-d6-kCs"/>
+                            <constraint firstItem="Qvi-jD-8f6" firstAttribute="height" secondItem="BlI-B6-Bzh" secondAttribute="height" multiplier="270/667" id="EBb-aM-bjW"/>
+                            <constraint firstItem="AFk-5T-7bG" firstAttribute="width" secondItem="BlI-B6-Bzh" secondAttribute="width" multiplier="330/375" id="KjF-d6-kCs"/>
                             <constraint firstItem="AFk-5T-7bG" firstAttribute="height" secondItem="BlI-B6-Bzh" secondAttribute="height" multiplier="550/667" id="YDq-ut-aif"/>
                             <constraint firstItem="AFk-5T-7bG" firstAttribute="centerX" secondItem="xcy-dy-E2j" secondAttribute="centerX" id="eJi-xd-kPq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xcy-dy-E2j"/>
                     </view>
                     <connections>
+                        <outlet property="beerDescriptionLabel" destination="1tW-gY-BIa" id="vTZ-zD-WlG"/>
                         <outlet property="beerImageView" destination="Qvi-jD-8f6" id="lcl-yY-HXs"/>
-                        <outlet property="detailsTextView" destination="Bap-pv-jBn" id="07n-TV-ebf"/>
+                        <outlet property="beerNameLabel" destination="Fnf-NP-JjR" id="VN6-AX-2cp"/>
+                        <outlet property="beerTaglineLabel" destination="sSF-sj-GJT" id="m4T-ZM-3Sz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFz-gQ-yhY" userLabel="First Responder" sceneMemberID="firstResponder"/>
