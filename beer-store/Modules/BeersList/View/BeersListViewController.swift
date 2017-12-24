@@ -11,6 +11,7 @@ import UIKit
 class BeersListViewController: UIViewController, BeersListView, UITableViewDataSource, UITableViewDelegate {
 
     var presenter: BeersListPresentation!
+    var beerCellHeight: CGFloat?
 
     @IBOutlet var beersListTableView: UITableView!
     var beersList: [Beer] = [] {
@@ -33,6 +34,7 @@ class BeersListViewController: UIViewController, BeersListView, UITableViewDataS
         beersListTableView.dataSource = self
         beersListTableView.delegate = self
         beersListTableView.register(UINib.init(nibName: "BeersListTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "BeersListCell")
+        beerCellHeight = beersListTableView.bounds.height / 2
     }
 
     func showNoContentScreen() {
@@ -68,7 +70,7 @@ class BeersListViewController: UIViewController, BeersListView, UITableViewDataS
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 320.0
+        return beerCellHeight ?? beersListTableView.bounds.height / 2
     }
 
 }
