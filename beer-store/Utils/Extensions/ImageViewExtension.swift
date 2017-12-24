@@ -18,7 +18,9 @@ extension UIImageView {
             }
 
             guard let data = data else { return }
-            self.image = UIImage(data: data)
+            DispatchQueue.main.async {
+                self.image = UIImage(data: data)
+            }
         }.resume()
     }
 }
