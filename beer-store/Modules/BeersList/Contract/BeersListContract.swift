@@ -21,6 +21,7 @@ protocol BeersListPresentation: class {
     var router: BeersListWireframe! { get set }
 
     func viewDidLoad()
+    func didPressedBookmarkButton()
     func didSelectBeer(_ beer: Beer)
 }
 
@@ -28,11 +29,11 @@ protocol BeersListUseCase: class {
     weak var output: BeersListInteractorOutput? { get set }
 
     func fetchBeersList()
+    func fetchBookmarkBeers()
 }
 
 protocol BeersListInteractorOutput: class {
     func beersListFetched(_ beers: [Beer])
-    func beersListFetchFailed()
 }
 
 protocol BeersListWireframe {

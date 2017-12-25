@@ -17,6 +17,10 @@ class BeersListPresenter: BeersListPresentation, BeersListInteractorOutput {
         interactor.fetchBeersList()
     }
 
+    func didPressedBookmarkButton() {
+        interactor.fetchBookmarkBeers()
+    }
+
     func didSelectBeer(_ beer: Beer) {
         router.presentBeerDetails(beer)
     }
@@ -29,9 +33,5 @@ class BeersListPresenter: BeersListPresentation, BeersListInteractorOutput {
         } else {
             view?.showNoContentScreen()
         }
-    }
-
-    func beersListFetchFailed() {
-        view?.showNoContentScreen()
     }
 }
