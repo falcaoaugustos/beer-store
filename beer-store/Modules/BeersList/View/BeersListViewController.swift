@@ -22,6 +22,8 @@ class BeersListViewController: UIViewController, BeersListView, UITableViewDataS
         }
     }
 
+    var bookmarkButton: UIBarButtonItem?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,14 +33,42 @@ class BeersListViewController: UIViewController, BeersListView, UITableViewDataS
     }
 
     func setup() {
+        setupBeersListTableView()
+        setupNavigationController()
+    }
+
+    func setupBeersListTableView() {
         beersListTableView.dataSource = self
         beersListTableView.delegate = self
         beersListTableView.register(UINib.init(nibName: "BeersListTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "BeersListCell")
         beerCellHeight = beersListTableView.bounds.height / 2
     }
 
+    func setupNavigationController() {
+        navigationController?.navigationBar.barStyle = .black
+
+        let bookmark = UIBarButtonItem(title: "Bookmark", style: .plain, target: self, action: #selector(didPressedBookmarkButton))
+        navigationItem.setRightBarButton(bookmark, animated: false)
+        bookmarkButton = bookmark
+    }
+
+    @objc func didPressedBookmarkButton() {
+        guard let title = bookmarkButton?.title else { return }
+
+        switch title {
+        case "Bookmark":
+            bookmarkButton?.title = "Beers List"
+            presenter.didPressedBookmarkButton()
+        case "Beers List":
+            bookmarkButton?.title = "Bookmark"
+            presenter.viewDidLoad()
+        default:
+            break
+        }
+    }
+
     func showNoContentScreen() {
-        // do nothing
+        beersList = []
     }
 
     func showBeersList(_ beers: [Beer]) {
