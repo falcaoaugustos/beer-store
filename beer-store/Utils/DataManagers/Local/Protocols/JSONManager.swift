@@ -45,7 +45,7 @@ extension JSONManager {
 
         if FileManager.default.fileExists(atPath: destiny) {
             do {
-                let data = try NSData(contentsOfFile: source) as Data
+                let data = try NSData(contentsOfFile: destiny) as Data
                 array = try JSONDecoder().decode([T].self, from: data)
             } catch let error {
                 print(error.localizedDescription)
