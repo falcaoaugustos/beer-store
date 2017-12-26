@@ -79,7 +79,6 @@ class BeersListViewController: UIViewController, BeersListView, BeersListTableVi
 
     func didPressedBookmarkBeer() {
         if let title = bookmarkButton?.title, title == "Beers List" {
-            print("treta Eterna")
             presenter.didPressedBookmarkButton()
         }
     }

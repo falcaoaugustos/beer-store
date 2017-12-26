@@ -43,7 +43,5 @@ class BeersListTableViewCell: UITableViewCell {
         backgroundColor = BeersBookmarkManager.bookmarkBeer(beer) ? .orange : .clear
 
         delegate?.didPressedBookmarkBeer()
-
-        print("Bookmark:", BeersBookmarkManager.beers, "\n")
     }
 }
