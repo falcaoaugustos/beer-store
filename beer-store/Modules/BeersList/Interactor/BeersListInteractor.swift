@@ -14,8 +14,7 @@ class BeersListInteractor: BeersListUseCase, ServerDispatcherDelegate {
 
     func fetchBeersList() {
         let request = UserService.getBeersList
-        // let dispatcher = ServerDispatcher(baseURL: .punkAPI)
-        let dispatcher = ServerDispatcher(baseURL: .local)
+        let dispatcher = ServerDispatcher(baseURL: .punkAPI)
         dispatcher.delegate = self
         dispatcher.execute(request: request)
     }
