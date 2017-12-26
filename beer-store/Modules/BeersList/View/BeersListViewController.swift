@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BeersListViewController: UIViewController, BeersListView, UITableViewDataSource, UITableViewDelegate {
+class BeersListViewController: UIViewController, BeersListView, BeersListTableViewCellDelegate, UITableViewDataSource, UITableViewDelegate {
 
     var presenter: BeersListPresentation!
     var beerCellHeight: CGFloat?
@@ -75,6 +75,15 @@ class BeersListViewController: UIViewController, BeersListView, UITableViewDataS
         beersList = beers
     }
 
+    // MARK: Beers List Table View Cell Delegate
+
+    func didPressedBookmarkBeer() {
+        if let title = bookmarkButton?.title, title == "Beers List" {
+            print("treta Eterna")
+            presenter.didPressedBookmarkButton()
+        }
+    }
+
     // MARK: Table View Data Source
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -88,6 +97,8 @@ class BeersListViewController: UIViewController, BeersListView, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let beer = beersList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "BeersListCell", for: indexPath) as! BeersListTableViewCell
+        cell.delegate = self
+        cell.backgroundColor = BeersBookmarkManager.containsBeer(beer) ? .red : .clear
         cell.setupWith(beer: beer)
 
         return cell

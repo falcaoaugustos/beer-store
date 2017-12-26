@@ -8,10 +8,18 @@
 
 import UIKit
 
+protocol BeersListTableViewCellDelegate {
+    func didPressedBookmarkBeer()
+}
+
 class BeersListTableViewCell: UITableViewCell {
     @IBOutlet var beerImageView: UIImageView!
     @IBOutlet var beerNameLabel: UILabel!
     @IBOutlet var beerTaglineLabel: UILabel!
+
+    var beer: Beer?
+
+    var delegate: BeersListTableViewCellDelegate? = nil
 
     func setupWith(beer: Beer) {
         beerImageView.updateImageFrom(string: beer.image_url)
@@ -25,5 +33,18 @@ class BeersListTableViewCell: UITableViewCell {
         beerTaglineLabel.lineBreakMode = .byWordWrapping
         beerTaglineLabel.numberOfLines = 0
         beerTaglineLabel.text = beer.tagline
+
+        self.beer = beer
+    }
+
+    @IBAction func didPressedBookmarkBeerButton() {
+        guard let beer = beer else { return }
+        BeersBookmarkManager.bookmarkBeer(beer)
+
+        backgroundColor = .red
+
+        delegate?.didPressedBookmarkBeer()
+
+        print("Bookmark:", BeersBookmarkManager.beers, "\n")
     }
 }
