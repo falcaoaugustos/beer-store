@@ -12,6 +12,22 @@ class BeersBookmarkManager: JSONManager {
     static var name = "BeersBookmarkJSON"
     static var beers: [Beer] = []
 
+    static func containsBeer(_ beer: Beer) -> Bool {
+        if beers.index(of: beer) != nil {
+            return true
+        }
+
+        return false
+    }
+
+    static func bookmarkBeer(_ beer: Beer) {
+        if let index = beers.index(of: beer) {
+            beers.remove(at: index)
+        } else {
+            beers.append(beer)
+        }
+    }
+
     static func loadData() {
          beers = self.readJSON()
     }
