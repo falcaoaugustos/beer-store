@@ -14,3 +14,12 @@ struct Beer: Codable {
     var description: String
     var image_url: String
 }
+
+extension Beer: Equatable {
+    static func == (lhs: Beer, rhs: Beer) -> Bool {
+        return lhs.name == rhs.name
+            && lhs.tagline == rhs.tagline
+            && lhs.description == rhs.description
+            && lhs.image_url == rhs.image_url
+    }
+}
