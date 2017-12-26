@@ -47,7 +47,7 @@ class BeersListViewController: UIViewController, BeersListView, BeersListTableVi
     func setupNavigationController() {
         navigationController?.navigationBar.barStyle = .black
 
-        let bookmark = UIBarButtonItem(title: "Bookmark", style: .plain, target: self, action: #selector(didPressedBookmarkButton))
+        let bookmark = UIBarButtonItem(title: "Bookmark List", style: .plain, target: self, action: #selector(didPressedBookmarkButton))
         navigationItem.setRightBarButton(bookmark, animated: false)
         bookmarkButton = bookmark
     }
@@ -56,11 +56,11 @@ class BeersListViewController: UIViewController, BeersListView, BeersListTableVi
         guard let title = bookmarkButton?.title else { return }
 
         switch title {
-        case "Bookmark":
+        case "Bookmark List":
             bookmarkButton?.title = "Beers List"
             presenter.didPressedBookmarkButton()
         case "Beers List":
-            bookmarkButton?.title = "Bookmark"
+            bookmarkButton?.title = "Bookmark List"
             presenter.viewDidLoad()
         default:
             break
@@ -98,7 +98,7 @@ class BeersListViewController: UIViewController, BeersListView, BeersListTableVi
         let beer = beersList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "BeersListCell", for: indexPath) as! BeersListTableViewCell
         cell.delegate = self
-        cell.backgroundColor = BeersBookmarkManager.containsBeer(beer) ? .red : .clear
+        cell.backgroundColor = BeersBookmarkManager.containsBeer(beer) ? .orange : .clear
         cell.setupWith(beer: beer)
 
         return cell

@@ -39,9 +39,8 @@ class BeersListTableViewCell: UITableViewCell {
 
     @IBAction func didPressedBookmarkBeerButton() {
         guard let beer = beer else { return }
-        BeersBookmarkManager.bookmarkBeer(beer)
-
-        backgroundColor = .red
+        
+        backgroundColor = BeersBookmarkManager.bookmarkBeer(beer) ? .orange : .clear
 
         delegate?.didPressedBookmarkBeer()
 

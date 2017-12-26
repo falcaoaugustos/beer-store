@@ -20,11 +20,13 @@ class BeersBookmarkManager: JSONManager {
         return false
     }
 
-    static func bookmarkBeer(_ beer: Beer) {
+    static func bookmarkBeer(_ beer: Beer) -> Bool {
         if let index = beers.index(of: beer) {
             beers.remove(at: index)
+            return false
         } else {
             beers.append(beer)
+            return true
         }
     }
 

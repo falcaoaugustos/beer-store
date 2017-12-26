@@ -39,7 +39,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWt-pp-Oku">
                                 <rect key="frame" x="0.0" y="96" width="183" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Bookmark Beer"/>
                                 <connections>
                                     <action selector="didPressedBookmarkBeerButton" destination="KGk-i7-Jjw" eventType="touchUpInside" id="J2a-TM-UGE"/>
                                 </connections>
