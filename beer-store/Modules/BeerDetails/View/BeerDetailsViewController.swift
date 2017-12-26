@@ -23,7 +23,7 @@ class BeerDetailsViewController: UIViewController, BeerDetailsView {
     }
 
     func showDetails(forBeer beer: Beer) {
-        beerImageView.updateImageFrom(string: beer.image_url)
+        beerImageView.updateImageWith(urlString: beer.image_url)
 
         beerNameLabel.font = beerNameLabel.font.withSize(UIScreen.main.bounds.height / 25)
         beerNameLabel.lineBreakMode = .byWordWrapping

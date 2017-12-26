@@ -7,20 +7,12 @@
 //
 
 import UIKit
+import Kingfisher
 
 extension UIImageView {
-    func updateImageFrom(string: String) {
-        let req = URL(string: string)!
+    func updateImageWith(urlString: String) {
+        let url = URL(string: urlString)!
 
-        URLSession.shared.dataTask(with: req) { (data, resp, error) in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-            }
-
-            guard let data = data else { return }
-            DispatchQueue.main.async {
-                self.image = UIImage(data: data)
-            }
-        }.resume()
+        self.kf.setImage(with: url)
     }
 }

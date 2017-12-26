@@ -22,7 +22,7 @@ class BeersListTableViewCell: UITableViewCell {
     var delegate: BeersListTableViewCellDelegate? = nil
 
     func setupWith(beer: Beer) {
-        beerImageView.updateImageFrom(string: beer.image_url)
+        beerImageView.updateImageWith(urlString: beer.image_url)
 
         beerNameLabel.font = beerNameLabel.font.withSize(UIScreen.main.bounds.height / 30)
         beerNameLabel.lineBreakMode = .byWordWrapping
