@@ -20,6 +20,7 @@
 		B54B0C7E1FF16FEE00ABCD79 /* BeersBookmarkJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = B54B0C7D1FF16FEE00ABCD79 /* BeersBookmarkJSON.json */; };
 		B55DA9EA1FEC6A8B00D5158D /* BeersListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55DA9E91FEC6A8B00D5158D /* BeersListRouter.swift */; };
 		B57AD3AE1FF47120003A6763 /* beer_storeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57AD3AD1FF47120003A6763 /* beer_storeTests.swift */; };
+		B57AD3B91FF489AE003A6763 /* BeersListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57AD3B81FF489AE003A6763 /* BeersListViewControllerTests.swift */; };
 		B57F8FA71FEAF2E100784178 /* BeersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F8FA61FEAF2E100784178 /* BeersListInteractor.swift */; };
 		B57F8FAA1FEAF7DD00784178 /* BeersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F8FA91FEAF7DD00784178 /* BeersListPresenter.swift */; };
 		B57F8FB01FEB4BDD00784178 /* BeersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F8FAF1FEB4BDD00784178 /* BeersListViewController.swift */; };
@@ -69,6 +70,7 @@
 		B57AD3AB1FF47120003A6763 /* beer-storeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "beer-storeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57AD3AD1FF47120003A6763 /* beer_storeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beer_storeTests.swift; sourceTree = "<group>"; };
 		B57AD3AF1FF47120003A6763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B57AD3B81FF489AE003A6763 /* BeersListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListViewControllerTests.swift; sourceTree = "<group>"; };
 		B57F8FA61FEAF2E100784178 /* BeersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListInteractor.swift; sourceTree = "<group>"; };
 		B57F8FA91FEAF7DD00784178 /* BeersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListPresenter.swift; sourceTree = "<group>"; };
 		B57F8FAF1FEB4BDD00784178 /* BeersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListViewController.swift; sourceTree = "<group>"; };
@@ -223,10 +225,35 @@
 		B57AD3AC1FF47120003A6763 /* beer-storeTests */ = {
 			isa = PBXGroup;
 			children = (
+				B57AD3B51FF4860F003A6763 /* Modules */,
 				B57AD3AD1FF47120003A6763 /* beer_storeTests.swift */,
 				B57AD3AF1FF47120003A6763 /* Info.plist */,
 			);
 			path = "beer-storeTests";
+			sourceTree = "<group>";
+		};
+		B57AD3B51FF4860F003A6763 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B57AD3B61FF48619003A6763 /* BeersList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B57AD3B61FF48619003A6763 /* BeersList */ = {
+			isa = PBXGroup;
+			children = (
+				B57AD3B71FF4862E003A6763 /* View */,
+			);
+			path = BeersList;
+			sourceTree = "<group>";
+		};
+		B57AD3B71FF4862E003A6763 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B57AD3B81FF489AE003A6763 /* BeersListViewControllerTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B57F8FA51FEAF2C200784178 /* Interactor */ = {
@@ -593,6 +620,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57AD3B91FF489AE003A6763 /* BeersListViewControllerTests.swift in Sources */,
 				B57AD3AE1FF47120003A6763 /* beer_storeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
