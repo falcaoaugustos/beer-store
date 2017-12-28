@@ -243,17 +243,9 @@
 		B57AD3B61FF48619003A6763 /* BeersList */ = {
 			isa = PBXGroup;
 			children = (
-				B57AD3B71FF4862E003A6763 /* View */,
-			);
-			path = BeersList;
-			sourceTree = "<group>";
-		};
-		B57AD3B71FF4862E003A6763 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				B57AD3B81FF489AE003A6763 /* BeersListViewControllerTests.swift */,
 			);
-			path = View;
+			path = BeersList;
 			sourceTree = "<group>";
 		};
 		B57F8FA51FEAF2C200784178 /* Interactor */ = {
