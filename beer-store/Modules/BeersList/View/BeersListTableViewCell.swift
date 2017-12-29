@@ -42,8 +42,8 @@ class BeersListTableViewCell: UITableViewCell {
 
     @IBAction func didPressedBookmarkBeerButton() {
         guard let beer = beer else { return }
-        
-        backgroundColor = presenter.didPressedBookmarkCellButton(of: beer)
+
+        backgroundColor = UIColor.getUserInterfaceColor(presenter.didPressedBookmarkCellButton(of: beer))
 
         delegate?.didPressedBookmarkBeer()
     }

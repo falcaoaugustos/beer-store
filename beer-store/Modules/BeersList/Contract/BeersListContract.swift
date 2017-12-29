@@ -23,7 +23,7 @@ protocol BeersListPresentation: class {
     func loadBeersList()
     func loadBookmarkedBeersList()
     func didPressedButton(withTitle title: String) -> String
-    func didPressedBookmarkCellButton(of beer: Beer) -> UIColor
+    func didPressedBookmarkCellButton(of beer: Beer) -> UserInterfaceColor
     func didSelectBeer(_ beer: Beer)
 }
 
