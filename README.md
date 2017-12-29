@@ -1,16 +1,16 @@
 # beer-store
 
-An iOS app to consult and bookmark your favorite beers. Here you can access the data source: [Punk API](https://punkapi.com/documentation/v2).
+An iOS app to check and bookmark your favorite beers. Here you can access the data source: [Punk API](https://punkapi.com/documentation/v2).
 
 ---
 
 ## Preview
 
-* You can consult the beer description or can bookmark it.
+* You can check the beer description or can bookmark it.
 
 ![ANIMATION_01](media/animation01.gif) ![ANIMATION_02](media/animation02.gif)
 
-* You can consult your bookmarked beers too.  
+* You can check your bookmarked beers too.  
 
 ![ANIMATION_03](media/animation03.gif)
 
