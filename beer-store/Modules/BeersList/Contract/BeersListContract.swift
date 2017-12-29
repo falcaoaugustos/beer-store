@@ -23,6 +23,7 @@ protocol BeersListPresentation: class {
     func loadBeersList()
     func loadBookmarkedBeersList()
     func didPressedButton(withTitle title: String) -> String
+    func didPressedBookmarkCellButton(of beer: Beer) -> UIColor
     func didSelectBeer(_ beer: Beer)
 }
 
@@ -31,6 +32,7 @@ protocol BeersListUseCase: class {
 
     func fetchBeersList()
     func fetchBookmarkBeers()
+    func bookmarkBeer(_ beer: Beer) -> Bool
 }
 
 protocol BeersListInteractorOutput: class {

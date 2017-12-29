@@ -19,9 +19,11 @@ class BeersListTableViewCell: UITableViewCell {
 
     var beer: Beer?
 
+    var presenter: BeersListPresentation!
+
     var delegate: BeersListTableViewCellDelegate? = nil
 
-    func setupWith(beer: Beer) {
+    func setupWith(beer: Beer, andPresenter presenter: BeersListPresentation) {
         beerImageView.updateImageWith(urlString: beer.image_url)
 
         beerNameLabel.font = beerNameLabel.font.withSize(UIScreen.main.bounds.height / 30)
@@ -35,12 +37,13 @@ class BeersListTableViewCell: UITableViewCell {
         beerTaglineLabel.text = beer.tagline
 
         self.beer = beer
+        self.presenter = presenter
     }
 
     @IBAction func didPressedBookmarkBeerButton() {
         guard let beer = beer else { return }
         
-        backgroundColor = BeersBookmarkManager.bookmarkBeer(beer) ? .orange : .clear
+        backgroundColor = presenter.didPressedBookmarkCellButton(of: beer)
 
         delegate?.didPressedBookmarkBeer()
     }

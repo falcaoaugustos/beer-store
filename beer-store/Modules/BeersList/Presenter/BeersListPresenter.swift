@@ -6,7 +6,7 @@
 //  Copyright © 2017 Augusto Falcão. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class BeersListPresenter: BeersListPresentation, BeersListInteractorOutput {
     weak var view: BeersListView?
@@ -32,6 +32,10 @@ class BeersListPresenter: BeersListPresentation, BeersListInteractorOutput {
         default:
             return "Beers List"
         }
+    }
+
+    func didPressedBookmarkCellButton(of beer: Beer) -> UIColor {
+        return interactor.bookmarkBeer(beer) ? .orange : .clear
     }
 
     func didSelectBeer(_ beer: Beer) {

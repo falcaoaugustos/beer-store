@@ -89,7 +89,7 @@ class BeersListViewController: UIViewController, BeersListView, BeersListTableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "BeersListCell", for: indexPath) as! BeersListTableViewCell
         cell.delegate = self
         cell.backgroundColor = BeersBookmarkManager.containsBeer(beer) ? .orange : .clear
-        cell.setupWith(beer: beer)
+        cell.setupWith(beer: beer, andPresenter: presenter)
 
         return cell
     }

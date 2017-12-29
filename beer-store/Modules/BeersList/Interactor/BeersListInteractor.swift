@@ -23,6 +23,10 @@ class BeersListInteractor: BeersListUseCase, ServerDispatcherDelegate {
         output?.beersListFetched(BeersBookmarkManager.beers)
     }
 
+    func bookmarkBeer(_ beer: Beer) -> Bool {
+        return BeersBookmarkManager.bookmarkBeer(beer)
+    }
+
     // MARK: Server Dispatcher Delegate
 
     func didReceiveRequestResponseData(_ data: Data?) {
