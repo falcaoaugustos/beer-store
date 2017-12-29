@@ -20,8 +20,9 @@ protocol BeersListPresentation: class {
     var interactor: BeersListUseCase! { get set }
     var router: BeersListWireframe! { get set }
 
-    func viewDidLoad()
-    func didPressedBookmarkButton()
+    func loadBeersList()
+    func loadBookmarkedBeersList()
+    func didPressedButton(withTitle title: String) -> String
     func didSelectBeer(_ beer: Beer)
 }
 

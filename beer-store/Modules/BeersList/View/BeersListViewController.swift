@@ -29,7 +29,7 @@ class BeersListViewController: UIViewController, BeersListView, BeersListTableVi
 
         setup()
 
-        presenter.viewDidLoad()
+        presenter.loadBeersList()
     }
 
     func setup() {
@@ -55,16 +55,7 @@ class BeersListViewController: UIViewController, BeersListView, BeersListTableVi
     @objc func didPressedBookmarkButton() {
         guard let title = bookmarkButton?.title else { return }
 
-        switch title {
-        case "Bookmark List":
-            bookmarkButton?.title = "Beers List"
-            presenter.didPressedBookmarkButton()
-        case "Beers List":
-            bookmarkButton?.title = "Bookmark List"
-            presenter.viewDidLoad()
-        default:
-            break
-        }
+        bookmarkButton?.title = presenter.didPressedButton(withTitle: title)
     }
 
     func showNoContentScreen() {
@@ -79,7 +70,7 @@ class BeersListViewController: UIViewController, BeersListView, BeersListTableVi
 
     func didPressedBookmarkBeer() {
         if let title = bookmarkButton?.title, title == "Beers List" {
-            presenter.didPressedBookmarkButton()
+            presenter.loadBookmarkedBeersList()
         }
     }
 

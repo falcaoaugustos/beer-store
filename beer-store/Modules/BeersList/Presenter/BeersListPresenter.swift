@@ -13,12 +13,25 @@ class BeersListPresenter: BeersListPresentation, BeersListInteractorOutput {
     var interactor: BeersListUseCase!
     var router: BeersListWireframe!
 
-    func viewDidLoad() {
+    func loadBeersList() {
         interactor.fetchBeersList()
     }
 
-    func didPressedBookmarkButton() {
+    func loadBookmarkedBeersList() {
         interactor.fetchBookmarkBeers()
+    }
+
+    func didPressedButton(withTitle title: String) -> String {
+        switch title {
+        case "Bookmark List":
+            loadBookmarkedBeersList()
+            return "Beers List"
+        case "Beers List":
+            loadBeersList()
+            return "Bookmark List"
+        default:
+            return "Beers List"
+        }
     }
 
     func didSelectBeer(_ beer: Beer) {
