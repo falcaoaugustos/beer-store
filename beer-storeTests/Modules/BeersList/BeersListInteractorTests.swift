@@ -12,12 +12,14 @@ import XCTest
 class BeersListInteractorTests: XCTestCase {
     func testAddBookmarkedBeer() {
         let interactor = BeersListInteractor()
+        BeersBookmarkManager.beers = []
         let result = interactor.bookmarkBeer(Beer(name: "", tagline: "", description: "", image_url: ""))
         XCTAssert(result)
     }
 
     func testAddAndRemoveBookmarkedBeer() {
         let interactor = BeersListInteractor()
+        BeersBookmarkManager.beers = []
         interactor.bookmarkBeer(Beer(name: "", tagline: "", description: "", image_url: ""))
         let result = interactor.bookmarkBeer(Beer(name: "", tagline: "", description: "", image_url: ""))
         XCTAssertFalse(result)

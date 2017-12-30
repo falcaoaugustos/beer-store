@@ -36,6 +36,7 @@ class BeersListPresenterTests: XCTestCase {
         let presenter = BeersListPresenter()
         let interactor = BeersListInteractor()
         presenter.interactor = interactor
+        BeersBookmarkManager.beers = []
         let result = presenter.didPressedBookmarkCellButton(of: Beer(name: "", tagline: "", description: "", image_url: ""))
         XCTAssertEqual(result, .orange)
     }
@@ -44,6 +45,7 @@ class BeersListPresenterTests: XCTestCase {
         let presenter = BeersListPresenter()
         let interactor = BeersListInteractor()
         presenter.interactor = interactor
+        BeersBookmarkManager.beers = []
         presenter.didPressedBookmarkCellButton(of: Beer(name: "", tagline: "", description: "", image_url: ""))
         let result = presenter.didPressedBookmarkCellButton(of: Beer(name: "", tagline: "", description: "", image_url: ""))
         XCTAssertEqual(result, .clear)
