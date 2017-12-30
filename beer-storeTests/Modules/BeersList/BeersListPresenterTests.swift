@@ -32,6 +32,14 @@ class BeersListPresenterTests: XCTestCase {
         XCTAssertEqual(result, "Beers List")
     }
 
+    func testDidPressedBookmarkAddCellButton() {
+        let presenter = BeersListPresenter()
+        let interactor = BeersListInteractor()
+        presenter.interactor = interactor
+        let result = presenter.didPressedBookmarkCellButton(of: Beer(name: "", tagline: "", description: "", image_url: ""))
+        XCTAssertEqual(result, .orange)
+    }
+
     func testDidPressedBookmarkAddAndRemoveCellButton() {
         let presenter = BeersListPresenter()
         let interactor = BeersListInteractor()
@@ -39,13 +47,5 @@ class BeersListPresenterTests: XCTestCase {
         presenter.didPressedBookmarkCellButton(of: Beer(name: "", tagline: "", description: "", image_url: ""))
         let result = presenter.didPressedBookmarkCellButton(of: Beer(name: "", tagline: "", description: "", image_url: ""))
         XCTAssertEqual(result, .clear)
-    }
-
-    func testDidPressedBookmarkAddCellButton() {
-        let presenter = BeersListPresenter()
-        let interactor = BeersListInteractor()
-        presenter.interactor = interactor
-        let result = presenter.didPressedBookmarkCellButton(of: Beer(name: "", tagline: "", description: "", image_url: ""))
-        XCTAssertEqual(result, .orange)
     }
 }
