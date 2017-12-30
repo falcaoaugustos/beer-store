@@ -25,19 +25,15 @@ class BeerDetailsViewController: UIViewController, BeerDetailsView {
     func showDetails(forBeer beer: Beer) {
         beerImageView.updateImageWith(urlString: beer.image_url)
 
-        beerNameLabel.font = beerNameLabel.font.withSize(UIScreen.main.bounds.height / 25)
-        beerNameLabel.lineBreakMode = .byWordWrapping
-        beerNameLabel.numberOfLines = 0
-        beerNameLabel.text = beer.name
+        setupLabel(beerNameLabel, withText: beer.name, andBase: 25)
+        setupLabel(beerTaglineLabel, withText: beer.tagline, andBase: 38)
+        setupLabel(beerDescriptionLabel, withText: beer.description, andBase: 50)
+    }
 
-        beerTaglineLabel.font = beerTaglineLabel.font.withSize(UIScreen.main.bounds.height / 38)
-        beerTaglineLabel.lineBreakMode = .byWordWrapping
-        beerTaglineLabel.numberOfLines = 0
-        beerTaglineLabel.text = beer.tagline
-
-        beerDescriptionLabel.font = beerDescriptionLabel.font.withSize(UIScreen.main.bounds.height / 50)
-        beerDescriptionLabel.lineBreakMode = .byWordWrapping
-        beerDescriptionLabel.numberOfLines = 0
-        beerDescriptionLabel.text = beer.description
+    func setupLabel(_ label: UILabel, withText text: String, andBase base: CGFloat) {
+        label.font = label.font.withSize(UIScreen.main.bounds.height / base)
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        label.text = text
     }
 }

@@ -26,18 +26,18 @@ class BeersListTableViewCell: UITableViewCell {
     func setupWith(beer: Beer, andPresenter presenter: BeersListPresentation) {
         beerImageView.updateImageWith(urlString: beer.image_url)
 
-        beerNameLabel.font = beerNameLabel.font.withSize(UIScreen.main.bounds.height / 30)
-        beerNameLabel.lineBreakMode = .byWordWrapping
-        beerNameLabel.numberOfLines = 0
-        beerNameLabel.text = beer.name
-
-        beerTaglineLabel.font = beerTaglineLabel.font.withSize(UIScreen.main.bounds.height / 43)
-        beerTaglineLabel.lineBreakMode = .byWordWrapping
-        beerTaglineLabel.numberOfLines = 0
-        beerTaglineLabel.text = beer.tagline
+        setupLabel(beerNameLabel, withText: beer.name, andBase: 30)
+        setupLabel(beerTaglineLabel, withText: beer.tagline, andBase: 43)
 
         self.beer = beer
         self.presenter = presenter
+    }
+
+    func setupLabel(_ label: UILabel, withText text: String, andBase base: CGFloat) {
+        label.font = label.font.withSize(UIScreen.main.bounds.height / base)
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        label.text = text
     }
 
     @IBAction func didPressedBookmarkBeerButton() {
